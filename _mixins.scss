@@ -35,3 +35,22 @@
 @mixin global-site-animation(){
   @include transition (all 300ms ease-out);
 }
+
+//this can be added stand alone, will be applied
+@mixin placeholder-color($color){
+  @include transition (all 300ms ease-out);
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $color;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: $color;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: $color;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: $color;
+    }
+
+}
+
